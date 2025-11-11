@@ -13,7 +13,9 @@ export const Navigation = () => (
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `navbar-item ${isActive ? 'has-background-grey-lighter' : ''}`
+            classNames('navbar-item', {
+              'has-background-grey-lighter': isActive,
+            })
           }
         >
           Home
@@ -22,7 +24,9 @@ export const Navigation = () => (
         <NavLink
           to="/people"
           className={({ isActive }) =>
-            classNames('navbar-item', { 'is-active': isActive })
+            classNames('navbar-item', {
+              'has-background-grey-lighter': isActive,
+            })
           }
         >
           People
